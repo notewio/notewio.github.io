@@ -1,1 +1,37 @@
-<html><head><meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta charset="utf-8" /><link rel="stylesheet" href="style.css" /><link rel="stylesheet" href="media.css" /><title>EWIO</title></head><body><div id="main"><div id="header"><h1>EWIO</h1></div><div><h2>music</h2><p class="caption">miscellaneous electronic music creations</p> <a href="https://ewio.bandcamp.com/album/sickness-shenanigans"> sickness shenanigans <span>5/20</span> </a> <a href="https://ewio.bandcamp.com/album/six-feet-above"> six feet above <span>1/19</span> </a></div><div><h2>programming</h2><p class="caption">mostly just smaller stuff</p> <a href="https://github.com/ahsu1230/mathnavigatorSite"><p style="display: inline; color: var(--midgray)">summer 2020, intern @</p> MathNavigator <span> frontend work<br> ReactJS, nodeJS </span> </a> <a href="https://github.com/notewio/shizhishurufa"> 十指输入法 <span> chinese input with only 10 buttons<br> AHK </span> </a> <a href="https://github.com/notewio/notewio.github.io"> this site <span> greatest webpage ever<br> HTML/CSS </span> </a></div><div><h2>other</h2><p class="caption">other stuff i do</p> <a href="https://www.youtube.com/channel/UCzXbITpf48SyZY91NtAfI9w"> youtube <span> random video ideas </span> </a> <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=1542147980"> de_peak <span> cs:go wingman map </span> </a></div></div></body></html>
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>EWIO</title>
+		<link rel="stylesheet" href="css/style.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+	<body onresize="bodyResize()">
+
+		<div id="header">
+			<h1>EWIO</h1>
+			<div id="content"></div>
+		</div>
+
+		<div id="links-container">
+
+			<div onclick="slideUp(0)">
+				<h2>PROGRAMMING</h2>
+			</div>
+
+			<div onclick="slideUp(1)">
+				<h2>MUSIC</h2>
+			</div>
+
+			<div onclick="slideUp(2)">
+				<h2>OTHER</h2>
+			</div>
+
+		</div>
+
+		<script src="js/three.js"></script>
+		<script src="js/MTLLoader.js"></script>
+		<script src="js/OBJLoader.js"></script>
+		<script src="js/script.js"></script>
+	</body>
+</html>

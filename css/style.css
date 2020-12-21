@@ -1,0 +1,118 @@
+@font-face {
+  font-family: Syne;
+  src: url('syne.ttf');
+}
+
+body {
+  margin: 0;
+  color: white;
+  font-family: Syne, sans-serif;
+  overflow: hidden;
+  background: linear-gradient(to bottom right, #2e3d3f, #1e1d1f);
+}
+
+#links-container > div {
+  position: absolute;
+  top: 0vh;
+  left: calc(50vw - 100vw / 7);
+  height: 100vh;
+  width: calc(100vw / 3.5);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background: linear-gradient(rgba(255, 255, 255, 0.6), transparent 45%);
+  background-size: 200% 200%;
+  background-position: 0% 100%;
+  opacity: 0;
+  transition: opacity 3s, top 2s, background-position 0.8s;
+}
+#links-container > div:hover {
+  background-position: 0% 0%;
+  cursor: pointer;
+}
+#links-container > div:first-child {
+  left: calc(50vw - 150vw / 3.5);
+}
+#links-container > div:last-child {
+  left: calc(50vw + 50vw / 3.5);
+}
+#links-container > div::before {
+  content: '';
+  height: 45vh;
+}
+
+#header {
+  position: absolute;
+  top: -25vh;
+  left: calc(50vw - 100vw / 7);
+  height: initial;
+  width: calc(100vw / 3.5);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  opacity: 1;
+  transition: top 2s ease-out;
+
+}
+#header h1 {
+  font-size: 60px;
+  font-weight: lighter;
+}
+#header #content {
+  opacity: 0;
+  transition: opacity 1.5s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#header #content a {
+  font-weight: bold;
+  margin-bottom: 3ex;
+  color: #e7ae3f;
+  font-size: 18px;
+}
+#header #content a:hover {
+  filter: brightness(1.15);
+  cursor: pointer;
+}
+
+canvas {
+  z-index: -1000;
+  width: 100vw;
+  height: 100vh;
+}
+
+.card-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 50vw;
+  max-width: 50vw;
+  position: relative;
+}
+.card {
+  border: 1px solid #efe6dd;
+  padding: 20px;
+  border-radius: 15px;
+  width: 25%;
+  margin: 18px;
+  display: flex;
+  flex-direction: column;
+}
+.card h3 {
+  margin: 0;
+}
+.card p {
+  flex: 1;
+}
+#header #content .card a {
+  font-size: initial;
+}
+.caption {
+  color: gray;
+}
